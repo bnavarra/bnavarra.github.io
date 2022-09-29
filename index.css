@@ -1,0 +1,126 @@
+@charset "utf-8";
+
+/* Bryce Navarra's Portfolio ; BlackYellowStripes PNG */
+#ttxt1{
+    /* Properties (Potentially makes major changes to page)*/
+    font-size: 50px;
+    text-align: center;
+    margin: 0px;
+    /* ////////// */
+
+    font-family: sans-serif;
+    font-weight: 900;
+    color: white;
+    text-shadow: rgba(0, 0, 0, 0.75) 5px 5px 10px;
+    
+    background-image: url(byarrows.jpg);
+}
+
+/* Also see these other links below... */
+#ttxt2{
+    /* Properties */
+    letter-spacing: 2px;
+    font-size: 40px;
+    text-align: center;
+    /* ////////// */
+
+    font-weight: 500px;
+    font-family: fantasy;
+    text-decoration: underline;
+}
+
+/* Horizontal bars within nav */
+hr{
+    /* Properties */
+    height: 30px;
+    margin: 0px;
+    /* ////////// */
+
+    background-color: white;
+}
+
+/* ONLY the <li> elements in the unordered list */ 
+li{
+    /* Properties */
+    float: left;
+    text-align: center;
+    width: 25%;
+    /* ////////// */
+
+    list-style-type: none;
+    height: 60px;
+}
+
+li > a{
+    color: white;
+    font-family: sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+}
+li > a:visited{
+    color:rgb(170, 170, 170);
+}
+li > a:hover{
+    color:rgb(131, 131, 131);
+}
+
+nav{
+    /* Properties */
+    /* ////////// */
+
+    display: block;
+    background-color: hsla(120, 30%, 20%, 0.5);
+    border: 1px solid white;
+}
+
+nav::after{
+    clear: both;
+    content: "";
+    display: table;
+}
+
+html{
+
+    /* Properties */
+    margin: 0px;
+    /* ////////// */
+    
+    background-color:black;
+    background-image: url(road-night-markings-sky.jpg);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+body{
+    /* Properties */
+    margin: 0px;
+    margin-left: 150px;
+    margin-right: 150px;
+    /* ////////// */
+
+    background-image:linear-gradient(rgb(90, 90, 105), rgb(55, 55, 60), rgb(10, 10, 15));
+    font-family:'Courier New', Courier, monospace;
+    border-left: 1px solid rgb(30, 30, 30);
+    border-right: 1px solid rgb(30, 30, 30);
+    box-shadow:black 15px 0px 25px, black -15px 0px 25px;
+}
+
+
+article{
+    /* Properties */
+    clear: both;
+    text-align: center;
+    padding: 10px;
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+    /* ////////// */
+    
+    background-color: rgb(51, 55, 75);
+}
+
+li:last-of-type::after{
+    clear: both;
+}
