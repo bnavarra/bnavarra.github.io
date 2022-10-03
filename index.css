@@ -29,8 +29,8 @@
     text-decoration: underline;
 }
 
-/* Horizontal bars within nav */
-hr{
+
+header hr{ /* hr within header */
     /* Properties */
     height: 30px;
     margin: 0px;
@@ -39,8 +39,8 @@ hr{
     background-color: white;
 }
 
-/* ONLY the <li> elements in the unordered list */ 
-li{
+/* Green nav bar */ 
+.mainnav{
     /* Properties */
     float: left;
     text-align: center;
@@ -51,11 +51,18 @@ li{
     height: 60px;
 }
 
-li > a{
+
+
+li > a{ /* Links in a list */
     color: white;
     font-family: sans-serif;
     font-weight: 900;
     font-size: 30px;
+}
+ul > li.myprojects{
+    font-size: 30px;
+    font-variant: small-caps;
+    
 }
 li > a:visited{
     color:rgb(170, 170, 170);
@@ -64,6 +71,9 @@ li > a:hover{
     color:rgb(131, 131, 131);
 }
 
+
+
+/* Nav Styles */
 nav{
     /* Properties */
     /* ////////// */
@@ -72,15 +82,18 @@ nav{
     background-color: hsla(120, 30%, 20%, 0.5);
     border: 1px solid white;
 }
-
 nav::after{
     clear: both;
     content: "";
     display: table;
 }
+nav li:last-of-type::after{
+    clear: both;
+}
+
+
 
 html{
-
     /* Properties */
     margin: 0px;
     /* ////////// */
@@ -98,6 +111,7 @@ body{
     margin: 0px;
     margin-left: 150px;
     margin-right: 150px;
+    height: 800px;
     /* ////////// */
 
     background-image:linear-gradient(rgb(90, 90, 105), rgb(55, 55, 60), rgb(10, 10, 15));
@@ -107,8 +121,7 @@ body{
     box-shadow:black 15px 0px 25px, black -15px 0px 25px;
 }
 
-
-article{
+#mainart{
     /* Properties */
     clear: both;
     text-align: center;
@@ -121,6 +134,23 @@ article{
     background-color: rgb(51, 55, 75);
 }
 
-li:last-of-type::after{
-    clear: both;
+#projart{
+     /* Properties */
+     clear: both;
+     text-align: center;
+     padding: 10px;
+     width: 92%;
+     margin-left: auto;
+     margin-right: auto;
+     /* ////////// */
+    background-color: rgb(41, 70, 41);
 }
+
+#projart > h1{
+    width: 15%;
+    margin: 0px;
+    text-align: center;
+    border-left: 3px black solid;
+    border-right: 3px black solid;
+}
+
