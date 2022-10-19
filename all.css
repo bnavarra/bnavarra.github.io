@@ -1,76 +1,83 @@
 @charset "utf-8";
 
 html{
-    background-image: url(road-night-markings-sky.jpg);
+    background-image: url("bg4.png");
     background-repeat: no-repeat;
     background-size: cover;
+
+    font-family: sans-serif;
+    color: white;
 }
 body{
-    margin-left: 9%;
-    margin-right: 9%;
-   
-    background-image: linear-gradient(#202020, #00000000, #202020),
-                      url("sgt.jpg");
-
+    margin-left: 11%;
+    margin-right: 11%;
+}
+.section1{
+    font-size: 15px;
+    text-align: center;
+    font-weight: 900;
+}
+.section2{
+    background-image: url("bg3.png");
     background-size:cover;
-    box-shadow: black 15px 10px 30px, black -15px 10px 30px;
+    padding: 20px;
+    
 }
+.section2 h1{
+    border: 3px solid white;
+    border-radius: 10px;
 
-#ttxt1{
-    font-size: 50px;
-    text-align: center;
-    border-top: 30px solid white;
-    border-bottom: 30px solid white;
-  
-    font-family: sans-serif;
-    font-weight: 900;
     color: white;
-    text-shadow: rgba(0, 0, 0, 0.75) 5px 5px 10px;
-
-    margin-bottom: 0px;
-    
-    
-    background-image: linear-gradient(#22264d , #ffffff8f );
-}
-.mainnav{
-    float: left;
-    text-align: center;
-    width: 25%;
-    
-    padding-top: 10px;
-    padding-bottom: 10px;
-   
-    list-style-type: none;
-
-    background: radial-gradient(#308d1e , #1c3a19 55%); 
-}
-.mainnav a{ 
-    color: rgb(230, 230, 230);
-    font-family: sans-serif;
-    font-weight: 900;
-    font-size: 30px;
-}
-.mainnav:hover{
-    background: radial-gradient(#75d362 , #20631a 55%); 
-}
-.body2 h1{
-    clear: both;
-    margin: 10px;
-
-    text-align: center;
-    border: 1px solid white;
-}
-ul{ 
-  padding: 0px;  
-  margin: 0px;
-}
-.content{
-    clear: both;
-    text-align: center;
-    padding: 10px;
-    width: 92%;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgb(51, 55, 75);
+  
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 20%;
+    
+    text-align: center;
 }
-
+.content{
+    font-size: larger;
+    margin: 60px;
+}
+h2{
+    margin: 5px 0px;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: bolder;
+    background: #333;
+    padding: 5px;
+    width: 45%;
+}
+#aboutme{
+    background: linear-gradient(0.25turn, rgb(255, 100, 0),rgb(0, 255, 125),rgb(150, 0, 255));
+}
+#projects{
+    background: linear-gradient(0.25turn, rgb(0, 0, 129),rgb(0, 153, 255),rgb(37, 14, 92));
+}
+#resume{
+    background: linear-gradient(0.25turn, rgb(0, 85, 25),rgb(0, 255, 34),rgb(34, 70, 0));
+}
+#terms{
+    background: linear-gradient(0.25turn, rgb(78, 0, 0),rgb(255, 0, 0), rgb(78, 0, 23));
+}
+.topnav{
+    background-color: #333;
+    overflow: hidden;
+}
+.topnav a{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 50px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.topnav a:hover { /* add transition */
+    background-color: #ddd;
+    color: black;
+}
+.topnav a.active{
+    background-color: #04AA6D;
+    color: white;
+}
