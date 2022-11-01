@@ -18,10 +18,8 @@ body {
     padding: 20px;
     margin-bottom: 50px;
 }
-section#s1 {
-    font-size: 15px;
-    font-weight: 900;
-}
+
+
 
 /* Banners */
 
@@ -44,69 +42,72 @@ section#s1 {
     background: linear-gradient(0.25turn, rgb(78, 0, 0),rgb(255, 0, 0));
 }
 
+
+
 /* Within div body */
 
-li p{
-    line-height: 0.8em;
-}
-section h2 {
+section h2 { /* gray bg headers in sections */
     margin: 5px 0px;
-    margin-top: 2em;
     color: rgba(255, 255, 255, 0.5);
     font-weight: bolder;
     font-size: 1.7em;
     background: #333;
     padding: 5px;
-    
 }
-section p {
+section p { /* paragraphs in sections */
     font-size: larger;
     line-height: 1.3em;
-    padding: 10px;
+    padding: 10px 25px;
 }
 #s3, #s4, #s5, #s6 {
     margin-top: 1.3em;
     margin-bottom: 5em;
-    width: 85%;
+    width: 85%; /* 85% of body */
     margin-left: auto;
     margin-right: auto;
-}
-#s3, #s4 {
     overflow: auto;
-    margin-bottom: 0;
-}
-#s3::after, #s4::after {
     clear: both;
 }
-#s4 div {
-    width: 35%;
+#s4 div.container { /* container for p's */
+    width: 55%;
     float: left;
+}
+#subsection1 { /* in s4: contains div AND figures */
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0px;
+}
+section { /* general section styling */
+    border: 5px dashed rgba(255, 255, 255, 0.05);
+    padding: 10px;
 }
 
 
 
 /* figures / images */
+
+figure figcaption {
+    text-align: center;
+}
+figure img { /* All images in figures */
+    width: 100%;
+}
 #f1, #f2 {
     width: 43%;
     float: left;
 }
-#f3 {
-   
-    width:30%;
+#f3 { /* contains .cv */
+    width:35%;
     float: left;
- 
 }
-
-figure img {
+.cv { /* Cuyahoga Valley image and figcaption */
     width: 100%;
 }
-figure figcaption {
-    text-align: center;
-}
 
 
 
-/* Nav list elements */
+/* navigation bar */
 
 .topnav {
     background-color: #333;
@@ -128,23 +129,23 @@ figure figcaption {
     background-color: #04AA6D;
     color: white;
 }
-span{
-    color: rgba(255, 255, 255, 0.2)
+span{ /* grays out text by h1 when NOT on home */
+    color: rgba(255, 255, 255, 0.2);
 }
 
 
 
 /* table elements */
 
-table, td, th {
-    border: 2px solid gray;
+table, td, th { /* establishes table border */
+    border: 3px solid gray;
 }
 td, th {
-    padding: 6px;
+    padding: 12px 10px;
     text-align: center;
 }
-th {
-    font-size: 1.5em; /* 1.5x than parent */
+th { /* font size 1.5x than parent */
+    font-size: 1.5em; 
 }
 .projectlink a {
     font-family: monospace, sans-serif;
@@ -159,11 +160,17 @@ th {
 .projectlink a:visited:hover {
     color:rgb(225, 170, 255);
 }
-table { /* in projects */
+table { /* table centered in bodydiv */
     margin-left: auto;
     margin-right: auto;
-    width: 60%;
+    width: 95%;
+    border-collapse: collapse;
 }
+
+
+
+/* Form */
+
 textarea {
     width: 100%;
     height: 4em;
@@ -183,15 +190,10 @@ legend {
     padding: 5px;
 }
 
+
+
 /* device compatibility */
 
-@media screen and (min-width: 320px) and (max-width: 768px) { /*  */
-    .section2 h1{
-        width: 90%;
-    }
-
-    .content{
-        width: 65%;
-        font-size: 15px;
-    }
+@media screen and (min-width: 320px) and (max-width: 768px) { 
+   
 }
