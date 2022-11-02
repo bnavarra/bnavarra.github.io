@@ -20,7 +20,6 @@ body {
 }
 
 
-
 /* Banners */
 
 .banner{
@@ -59,30 +58,50 @@ section p { /* paragraphs in sections */
     line-height: 1.3em;
     padding: 10px 25px;
 }
-#s3, #s4, #s5, #s6 {
-    margin-top: 1.3em;
-    margin-bottom: 5em;
+section { /* VERY similar to s1 s2 s3 s4 etc... */
+    border: 5px dashed rgba(255, 255, 255, 0.05);
+    padding: 10px;
+}
+#s1, #s2, #s3, #s4 {
+    margin-top: 4em;
     width: 85%; /* 85% of body */
     margin-left: auto;
     margin-right: auto;
     overflow: auto;
     clear: both;
 }
-#s4 div.container { /* container for p's */
-    width: 55%;
+#s2 div.container { /* container for p's */
+    width: 51%;
     float: left;
 }
-#subsection1 { /* in s4: contains div AND figures */
-    width: 75%;
+#subsection1 { /* in s2: contains div AND figures */
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
     border: 0px;
 }
-section { /* general section styling */
-    border: 5px dashed rgba(255, 255, 255, 0.05);
-    padding: 10px;
+#subsection2 {
+    border: 0px;
+}
+li.fit {
+    width: fit-content;
+    margin-right: 0px;
 }
 
+
+#logo1 {
+    width: 19%;
+}
+#logo2 {
+    width: 16.5%;
+}
+#logo3 {
+    width: 19%;
+}
+#s3 ul {
+    width: fit-content;
+    float: left;
+}
 
 
 /* figures / images */
@@ -93,13 +112,235 @@ figure figcaption {
 figure img { /* All images in figures */
     width: 100%;
 }
-#f1, #f2 {
-    width: 43%;
+#s1 #f1, #s1 #f2 {
+    width: 40%;
+}
+#f1 {
     float: left;
+}
+#f2 {
+    float: right;
 }
 #f3 { /* contains .cv */
     width:35%;
+    float: right;
+}
+.cv { /* Cuyahoga Valley image and figcaption */
+    width: 100%;
+}
+
+
+
+/* navigation bar */
+
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+.topnav a {
     float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 50px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.topnav a:hover { /* add transition */
+    background-color: #ddd;
+    color: black;
+}
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+span{ /* grays out text by h1 when NOT on home */
+    color: rgba(255, 255, 255, 0.2);
+}
+
+
+
+/* table elements */
+
+table, td, th { /* establishes table border */
+    border: 3px solid gray;
+}
+td, th {
+    padding: 12px 10px;
+    text-align: center;
+}
+th { /* font size 1.5x than parent */
+    font-size: 1.5em; 
+}
+.projectlink a {
+    font-family: monospace, sans-serif;
+    color:rgb(90, 90, 190);
+}
+.projectlink a:hover {
+    color:rgb(170, 170, 255);
+}
+.projectlink a:visited {
+    color:rgb(145, 90, 190);
+}
+.projectlink a:visited:hover {
+    color:rgb(225, 170, 255);
+}
+table { /* table centered in bodydiv */
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    border-collapse: collapse;
+}
+#alttable {
+    text-align: center;
+    list-style-type: none;
+    padding: 0px;
+    line-height: 2em;
+    display: none;
+}
+
+
+
+/* Form */
+
+textarea {
+    width: 100%;
+    height: 4em;
+}
+form {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#buttons {
+    width:fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+legend {
+    background-color: red;
+    padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+/* device compatibility */
+
+@media screen and (max-width: 768px) { 
+   
+html {
+    background:rgb(15, 15, 15);
+}
+body {
+    margin-left: 0%;
+    margin-right: 0%;
+}
+.bodydiv {
+    background:rgb(30, 30, 30);
+}
+h1 {
+   text-align: center;
+}
+
+
+/* Banners */
+
+.banner{
+    padding: 10px;
+    width: 70%;
+    border: 5px solid white;
+    border-radius: 10px;
+    margin-top: 1.3em;
+
+}
+
+#aboutme {
+    background: linear-gradient(0.25turn, rgb(255, 100, 0),rgb(0, 255, 125),rgb(150, 0, 255));
+}
+#projects {
+    background: linear-gradient(0.25turn, rgb(0, 0, 129),rgb(0, 153, 255));
+}
+#resume {
+    background: linear-gradient(0.25turn, rgb(0, 85, 25),rgb(0, 255, 34));
+}
+#terms {
+    background: linear-gradient(0.25turn, rgb(78, 0, 0),rgb(255, 0, 0));
+}
+
+
+
+/* Within div body */
+
+section h2 { /* gray bg headers in sections */
+    margin: 0px 0px;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: bolder;
+    font-size: 1.7em;
+    background: rgb(63, 63, 63);
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+section p { /* paragraphs in sections */
+    font-size: 1.5em;
+    line-height: 1.4em;
+    letter-spacing: 0.05em;
+    padding: 10px 25px;
+    text-align: center;
+}
+section { /* VERY similar to s1 s2 s3 s4 etc... */
+    border: 0px;
+    padding: 0px;
+
+}
+#s1, #s2, #s3, #s4 {
+    margin-top: 4em;
+    width: 100%; 
+    overflow: hidden;
+ 
+}
+#s2 div.container { /* container for p's */
+    width: 100%;
+    float: none;
+}
+#subsection1 { /* in s2: contains div AND figures */
+    width: 100%;
+    border: 0px;
+}
+
+
+
+.banner, #s1, #s2, #s3, #s4, #subsection1, #f1, #f2{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/* figures / images */
+
+figure figcaption {
+    font-size: larger;
+    text-align: center;
+}
+figure img { /* All images in figures */
+    width: 100%;
+}
+#f1, #f2 {
+    width: 100%;
+    float: none;
+
+}
+#f3 { /* contains .cv */
+    width: 100%;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
 }
 .cv { /* Cuyahoga Valley image and figcaption */
     width: 100%;
@@ -190,10 +431,108 @@ legend {
     padding: 5px;
 }
 
+}
 
+@media screen and (max-width: 1930px) {
+    #subsection1 {
+        width: 80%;
+    }
+}
 
-/* device compatibility */
+@media screen and (max-width: 1680px) {
+    #subsection1 {
+        width: 90%;
+    }
+}
 
-@media screen and (min-width: 320px) and (max-width: 768px) { 
+@media screen and (max-width: 1580px) { /* section 3 */
+    #s3 ul {
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #subsection2 {
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    
+    #logo1 {
+        width: 30%;
+    }
+    #logo2 {
+        width: 27%;
+    }
+    #logo3 {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    #subsection1 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1285px) {
+    #s1 p {
+        text-align: center;
+    }
+    #f1, #f2 {
+        float: none;
+        width: 80%;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #f1{
+        margin-bottom: 4em;
+    }
+
+    /* section 2*/
+
+    #s2 div.container {
+        float: none;
+        width: 90%;
+        text-align: center;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #subsection1 {
+        width:85%;
+    }
+    #f3 { 
+        float: none;
+        width:80%;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+ 
+@media screen and (max-width: 1000px) {
+    .header {
+        font-size: 1.5em;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 920px) { /* nav bar */
+    
+}
+
+@media screen and (max-width: 524px) {
    
+
+
+    section table {
+        display: none;
+    }
+    #alttable {
+        display: block;
+    }
 }
