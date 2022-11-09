@@ -41,10 +41,13 @@ body {
     background: linear-gradient(0.25turn, rgb(78, 0, 0),rgb(255, 0, 0));
 }
 
-
-
 /* Within div body */
 
+
+section h3 {
+    font-size: 2em;
+    padding-left: 25px;
+}
 section h2 { /* gray bg headers in sections */
     margin: 5px 0px;
     color: rgba(255, 255, 255, 0.5);
@@ -58,6 +61,11 @@ section p { /* paragraphs in sections */
     line-height: 1.3em;
     padding: 10px 25px;
 }
+section dl {
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
 section { /* VERY similar to s1 s2 s3 s4 etc... */
     border: 5px dashed rgba(255, 255, 255, 0.05);
     padding: 10px;
@@ -88,21 +96,34 @@ li.fit {
     margin-right: 0px;
 }
 
+#pdf {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#centeralign {
+    text-align: center;
+    color: gray;
+    font-style: italic;
+}
 
-#logo1 {
+#logo1, #logo3, #logo6 {
     width: 19%;
 }
 #logo2 {
     width: 16.5%;
 }
-#logo3 {
-    width: 19%;
+#logo4, #logo5, #logo6 {
+ padding-top: 20px;
 }
-#s3 ul {
+#logo4, #logo5 {
+    width: 13%;
+    padding-right: 10px;
+}
+#s3 ul, #s4 ul {
     width: fit-content;
     float: left;
 }
-
 
 /* figures / images */
 
@@ -127,6 +148,16 @@ figure img { /* All images in figures */
 }
 .cv { /* Cuyahoga Valley image and figcaption */
     width: 100%;
+}
+
+
+dt {
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+dd {
+    padding: 5px 5px 30px 5px;
+    font-size: 1.2em;
 }
 
 
@@ -197,6 +228,8 @@ table { /* table centered in bodydiv */
     line-height: 2em;
     display: none;
 }
+
+
 
 
 
@@ -286,6 +319,7 @@ section h2 { /* gray bg headers in sections */
     text-align: center;
     width: 100%;
 }
+
 section p { /* paragraphs in sections */
     font-size: 1.5em;
     line-height: 1.4em;
@@ -446,7 +480,7 @@ legend {
 }
 
 @media screen and (max-width: 1580px) { /* section 3 */
-    #s3 ul {
+    #s3 ul, #s4 ul {
         float: none;
         margin-left: auto;
         margin-right: auto;
@@ -459,14 +493,15 @@ legend {
     }
 
     
-    #logo1 {
+    #logo1, #logo3, #logo6 {
         width: 30%;
     }
     #logo2 {
         width: 27%;
     }
-    #logo3 {
-        width: 30%;
+    #logo4, #logo5 {
+        width: 25%;
+        padding-right: 20px;
     }
 }
 
@@ -511,9 +546,11 @@ legend {
         margin-left: auto;
         margin-right: auto;
     }
+    #presec {
+        width: 80%;
+    }
 }
 
- 
 @media screen and (max-width: 1000px) {
     .header {
         font-size: 1.5em;
@@ -522,7 +559,6 @@ legend {
 }
 
 @media screen and (max-width: 920px) { /* nav bar */
-    
 }
 
 @media screen and (max-width: 524px) {
