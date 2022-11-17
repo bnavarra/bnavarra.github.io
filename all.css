@@ -40,10 +40,21 @@ body {
 #terms {
     background: linear-gradient(0.25turn, rgb(78, 0, 0),rgb(255, 0, 0));
 }
+#favorites {
+    background: linear-gradient(0.25turn, rgb(255, 147, 232),rgb(124, 32, 112));
+}
 
 
 
 /* Within div body */
+h4 {
+    width: 75%;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.05);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
 section h3 {
     font-size: 2em;
     padding-left: 25px;
@@ -90,6 +101,12 @@ section { /* VERY similar to s1 s2 s3 s4 etc... */
 .subsection2 {
     border: 0px;
 }
+.subsection3 {
+    border: 0px;
+    width: 46%;
+    padding-left: 10px;
+    float: left;
+}
 li.fit {
     width: fit-content;
     margin-right: 0px;
@@ -121,7 +138,6 @@ li.fit {
     width: fit-content;
     float: left;
 }
-
 
 
 /* figures / images */
@@ -374,7 +390,7 @@ figure img { /* All images in figures */
     }
 
     .subsection2 {
-        border: 0px;
+        
         width: 75%;
         margin-left: auto;
         margin-right: auto;
